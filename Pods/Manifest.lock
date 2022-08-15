@@ -1,0 +1,65 @@
+PODS:
+  - Kingfisher (7.2.1)
+  - KingfisherWebP (1.4.0):
+    - Kingfisher (~> 7.0)
+    - libwebp (>= 1.1.0)
+  - libwebp (1.2.1):
+    - libwebp/demux (= 1.2.1)
+    - libwebp/mux (= 1.2.1)
+    - libwebp/webp (= 1.2.1)
+  - libwebp/demux (1.2.1):
+    - libwebp/webp
+  - libwebp/mux (1.2.1):
+    - libwebp/demux
+  - libwebp/webp (1.2.1)
+  - MBProgressHUD (1.2.0)
+  - ReachabilitySwift (5.0.0)
+  - SDWebImage (5.12.5):
+    - SDWebImage/Core (= 5.12.5)
+  - SDWebImage/Core (5.12.5)
+  - SwiftMessages (9.0.6):
+    - SwiftMessages/App (= 9.0.6)
+  - SwiftMessages/App (9.0.6)
+  - SwiftyJSON (5.0.1)
+
+DEPENDENCIES:
+  - Kingfisher
+  - KingfisherWebP
+  - MBProgressHUD
+  - ReachabilitySwift
+  - SDWebImage
+  - SwiftMessages (from `https://github.com/SwiftKickMobile/SwiftMessages.git`)
+  - SwiftyJSON
+
+SPEC REPOS:
+  trunk:
+    - Kingfisher
+    - KingfisherWebP
+    - libwebp
+    - MBProgressHUD
+    - ReachabilitySwift
+    - SDWebImage
+    - SwiftyJSON
+
+EXTERNAL SOURCES:
+  SwiftMessages:
+    :git: https://github.com/SwiftKickMobile/SwiftMessages.git
+
+CHECKOUT OPTIONS:
+  SwiftMessages:
+    :commit: 4e49214f64f949cc00af225e1f6f4457f6fd62d5
+    :git: https://github.com/SwiftKickMobile/SwiftMessages.git
+
+SPEC CHECKSUMS:
+  Kingfisher: 7c084bebf7d548c623ad41bcf765fb200efed369
+  KingfisherWebP: f4b76064c50a36c4cadd37548496ecebfdcb39e8
+  libwebp: 98a37e597e40bfdb4c911fc98f2c53d0b12d05fc
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  SDWebImage: 0905f1b7760fc8ac4198cae0036600d67478751e
+  SwiftMessages: f0c7ef4705a570ad6c5e208b611f4333e660ed92
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+
+PODFILE CHECKSUM: 760dc34c8cf9ff609aa9e63547ce2473da4b38d5
+
+COCOAPODS: 1.11.2
