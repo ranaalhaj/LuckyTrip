@@ -12,6 +12,8 @@ class DestinationsForMeViewController: BaseViewController {
     
     //MARK:  DECLERATIONS
     @IBOutlet weak var noDataLbl: UILabel!
+    @IBOutlet weak var savedDestCountLbl: UILabel!
+    
     @IBOutlet weak var destinationsCollectionView: UICollectionView!
     private var refreshControl: UIRefreshControl?
     
@@ -62,11 +64,6 @@ class DestinationsForMeViewController: BaseViewController {
         self.dataSource.loadData()
     }
     
-    func deleteDestAt(index: Int){
-        
-    }
-    
-    
 }
 
 //MARK:  SETUP
@@ -86,6 +83,7 @@ private extension DestinationsForMeViewController {
             }
             //Observer here will refresh the UI and reload the fetched data
             self.destinationsCollectionView.reloadData()
+            self.savedDestCountLbl.text = "\(first.count)"
         }
     }
 }

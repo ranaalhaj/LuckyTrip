@@ -48,6 +48,8 @@ class Constants {
     
     struct numbers {
         static let MIN_ITEMS_TO_SAVE : Int = 3
+        static let ACS_TAG : Int = 100
+        static let DES_TAG : Int = 200
         
     }
 

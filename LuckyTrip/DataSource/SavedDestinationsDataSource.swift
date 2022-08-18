@@ -76,7 +76,6 @@ extension SavedDestinationsDataSource : UICollectionViewDelegate, UICollectionVi
 }
 
 
-
 extension SavedDestinationsDataSource : SelectedItemsDelegate{
     func playButtonClicked(destination: DestinationModel) {
         //Call the player here
@@ -86,6 +85,7 @@ extension SavedDestinationsDataSource : SelectedItemsDelegate{
         if let destinations = self.data.value.first, let item  = destinations[index] as? SavedDestinations {
         self.viewModel?.deleteDest(SavedDest: item)
             self.loadData()
+            
         }
     }
 }

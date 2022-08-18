@@ -13,11 +13,15 @@ class DestinationsHomeViewController: BaseViewController {
     @IBOutlet weak var noDataLbl: UILabel!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var destinationsCollectionView: UICollectionView!
+    @IBOutlet weak var ascButton : UIButton!
+    @IBOutlet weak var desButton : UIButton!
+    
+    
     private var refreshControl: UIRefreshControl?
     private var selectButton : UIBarButtonItem!
     private var saveButton : UIBarButtonItem!
     private var cancelButton : UIBarButtonItem!
-    
+   
     var mode = ListModeType.normal
     private lazy var dataSource = DestinationsDataSource(self,destinationsCollectionView)
     private lazy var viewModel : DestinationViewModel = {
@@ -93,6 +97,24 @@ class DestinationsHomeViewController: BaseViewController {
     }
     
     //MARK:  ACTIONS
+    @IBAction func sortAction(_ sender: UIButton) {
+        let tag = sender.tag
+        if (tag == Constants.numbers.ACS_TAG){
+            self.ascButton.isHidden = true
+            self.desButton.isHidden = false
+            let sortArray =  self.dataSource.data.value.first?.destinations?.sorted(by: { $0.city.lowercased() < $1.city.lowercased() })
+            self.dataSource.data.value.first?.destinations  =  sortArray
+        }else{
+            self.ascButton.isHidden = false
+            self.desButton.isHidden = true
+            let sortArray =  self.dataSource.data.value.first?.destinations?.sorted(by: { $0.city.lowercased() > $1.city.lowercased() })
+            self.dataSource.data.value.first?.destinations  =  sortArray
+        }
+        
+        self.destinationsCollectionView.reloadData()
+        
+    }
+    
     @objc func selectButtonAction(){
         self.mode = ListModeType.select
         self.destinationsCollectionView.reloadData()
@@ -171,6 +193,9 @@ private extension DestinationsHomeViewController {
                 self.noDataLbl.isHidden = true
             }
             //Observer here will refresh the UI and reload the fetched data
+            self.ascButton.isHidden = true
+            self.desButton.isHidden = false
+            
             self.destinationsCollectionView.reloadData()
         }
     }
