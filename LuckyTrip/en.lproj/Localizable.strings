@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  LuckyTrip
+
+  Created by Rana Alhaj on 15/08/2022.
+  
+*/
+
+"Network connection error" = "Network connection error";
+"no_data" = "no_data";
+"your destinations have been saved" = "your destinations have been saved";
+"Save" = "Save";
+"Cancel" = "Cancel";
+"Home" = "Home";
+"For me" = "For me";
+"Your list is empty" = "Your list is empty";
+"your destinations already have been saved" = "your destinations already have been saved";
+"No data found" = "No data found";
+"Internet Connection not Available!" = "Internet Connection not Available!";
