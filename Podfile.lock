@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.6.2)
   - Kingfisher (7.2.1)
   - KingfisherWebP (1.4.0):
     - Kingfisher (~> 7.0)
@@ -12,8 +13,17 @@ PODS:
   - libwebp/mux (1.2.1):
     - libwebp/demux
   - libwebp/webp (1.2.1)
+  - Localize-Swift (3.2.0):
+    - Localize-Swift/LocalizeSwiftCore (= 3.2.0)
+    - Localize-Swift/UIKit (= 3.2.0)
+  - Localize-Swift/LocalizeSwiftCore (3.2.0)
+  - Localize-Swift/UIKit (3.2.0):
+    - Localize-Swift/LocalizeSwiftCore
   - MBProgressHUD (1.2.0)
-  - ReachabilitySwift (5.0.0)
+  - Moya (15.0.0):
+    - Moya/Core (= 15.0.0)
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
   - SDWebImage (5.12.5):
     - SDWebImage/Core (= 5.12.5)
   - SDWebImage/Core (5.12.5)
@@ -23,21 +33,26 @@ PODS:
   - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
+  - Alamofire
   - Kingfisher
   - KingfisherWebP
+  - Localize-Swift (~> 3.2)
   - MBProgressHUD
-  - ReachabilitySwift
+  - Moya
   - SDWebImage
   - SwiftMessages (from `https://github.com/SwiftKickMobile/SwiftMessages.git`)
   - SwiftyJSON
 
 SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - Localize-Swift
+    - Moya
   trunk:
     - Kingfisher
     - KingfisherWebP
     - libwebp
     - MBProgressHUD
-    - ReachabilitySwift
     - SDWebImage
     - SwiftyJSON
 
@@ -51,15 +66,17 @@ CHECKOUT OPTIONS:
     :git: https://github.com/SwiftKickMobile/SwiftMessages.git
 
 SPEC CHECKSUMS:
+  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
   Kingfisher: 7c084bebf7d548c623ad41bcf765fb200efed369
   KingfisherWebP: f4b76064c50a36c4cadd37548496ecebfdcb39e8
   libwebp: 98a37e597e40bfdb4c911fc98f2c53d0b12d05fc
+  Localize-Swift: 6f4475136bdb0d7b2882ea3d4ea919d70142b232
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
-  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   SDWebImage: 0905f1b7760fc8ac4198cae0036600d67478751e
   SwiftMessages: f0c7ef4705a570ad6c5e208b611f4333e660ed92
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: 760dc34c8cf9ff609aa9e63547ce2473da4b38d5
+PODFILE CHECKSUM: 1a63c0961f9d169003f42cdd19bc9d991365f4ff
 
 COCOAPODS: 1.11.2

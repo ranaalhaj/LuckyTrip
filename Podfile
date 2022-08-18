@@ -4,34 +4,26 @@
 target 'LuckyTrip' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  pod 'ReachabilitySwift'
+  pod 'Alamofire'
   pod 'MBProgressHUD'
-  pod 'SwiftMessages'  , :git => 'https://github.com/SwiftKickMobile/SwiftMessages.git'
   pod 'Kingfisher'
   pod 'SDWebImage'
   pod 'SwiftyJSON'
   pod 'KingfisherWebP'
- 
+  source 'https://github.com/CocoaPods/Specs.git'
+  pod 'Localize-Swift', '~> 3.2'
+  pod 'Moya'
+  pod 'SwiftMessages'  , :git => 'https://github.com/SwiftKickMobile/SwiftMessages.git'
+  
+  
   target 'LuckyTripTests' do
     inherit! :search_paths
-    pod 'ReachabilitySwift'
-    pod 'MBProgressHUD'
-    pod 'SwiftMessages'  , :git => 'https://github.com/SwiftKickMobile/SwiftMessages.git'
-    pod 'Kingfisher'
-    pod 'SDWebImage'
-    pod 'SwiftyJSON'
-    pod 'KingfisherWebP'
+   
   
   end
 
   target 'LuckyTripUITests' do
-    pod 'ReachabilitySwift'
-    pod 'MBProgressHUD'
-    pod 'SwiftMessages'  , :git => 'https://github.com/SwiftKickMobile/SwiftMessages.git'
-    pod 'Kingfisher'
-    pod 'SDWebImage'
-    pod 'SwiftyJSON'
-    pod 'KingfisherWebP'
+   
   
   end
 
